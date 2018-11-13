@@ -1,0 +1,778 @@
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button], input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+body {
+    color: #1f1f1f;
+    margin: 0;
+    background-color: #f6f6f6;
+}
+
+body * {
+	transition: 0.4s all
+}
+
+a {
+    color: #f6f6f6;
+    text-decoration: none;
+}
+
+a:hover, a:active  {
+    color: #e4a436;
+}
+
+.active {
+    color: #e4a436;
+}
+
+/* Font Styles */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Abril Fatface', cursive;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+p {
+	font-family: Montserrat, sans-serif;
+	font-size: 20px;
+	line-height: 32px;
+}
+
+
+.headline-lg {
+    font-size: 70px;
+    line-height: 55px;
+}
+
+.headline-m {
+    font-size: 42px;
+}
+
+.headline-sm {
+    font-size: 32px;
+} 
+
+
+.headline-xs {
+    font-size: 24px;
+}
+
+.text-margin {
+    margin: 35px 0; 
+}
+
+.section {
+    padding: 90px 30px;
+}
+
+/* Container */
+
+.container {
+    max-width: 1095px;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+}
+
+/* Header & Navigation */
+
+#hamburger {
+    display: none;
+    text-align: right;
+    background-color: #345231;
+    cursor: pointer;
+    padding: 20px 20px 0 0;
+    color: #f6f6f6;
+    font-size: 30px;
+}
+
+#toggle {
+    display: none;
+}
+
+.navigation {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    width: 100%;
+    height: 80px;
+    margin: 0;
+    padding: 0;
+    background-color: #345231;
+}
+
+.logo {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 32px;
+    letter-spacing: 1px;
+    color: #f6f6f6;
+}
+
+.navItem {
+    margin: 0 20px;
+}
+
+.menu-font {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 29px;
+    letter-spacing: 1px;
+}
+
+.header-headline::before { 
+    content: url('../assets/circle-text.png');
+    left: -10px;
+    top: 15px;
+    position: absolute;
+}
+
+.header-headline {
+    position: relative;
+    font-size: 115px;
+    text-align: right;
+    letter-spacing: 5px; 
+    padding: 0 20px 0 50px;
+    flex-grow: 2;    
+    line-height: 610px;
+}
+
+.header-content {
+    color: #f6f6f6;
+    height: 610px;
+    background-color: #345231;
+}
+
+.flex-headline {
+    display: flex; 
+    flex-flow: row;
+}
+
+.flex-row {
+    display: flex; 
+    flex-flow: row;
+}
+
+.flex-section-three {
+    display: flex; 
+    flex-direction: row;
+}
+
+.img-container {
+    flex-grow: 1;
+    padding-right: 50px;
+}
+
+.header-img {
+    max-width: 435px;
+    width: 100%;
+    height: auto;
+    margin-top: 65px;
+    box-shadow: 17px 17px rgb(255, 255, 255);
+}
+
+
+/* Button */
+
+.btn {
+    background-color: #e4a436;
+    color: #1f1f1f;
+    font-family: 'Abril Fatface', cursive;
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: 1px; 
+    padding: 10px 20px;
+	margin: 10px 0;
+	display: inline-block;
+    border: 1px solid #e4a436;
+}
+
+.btn:hover {
+    background-color: #ffbd4b; 
+    border: 1px solid #ffbd4b;
+    color: #1f1f1f;
+}
+
+/* Who's Willow Section */ 
+.section-one {
+    background-color: #f6f6f6;
+}
+
+.whos-willow {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Section Two Homepage */
+
+.section-two {
+    background: #FFF;
+}
+
+.section-two-image-one {
+    margin-top: -130px;
+    box-shadow: 17px 17px #709b6b, -500px 17px #709b6b;
+}
+
+.section-two-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.section-two-row:last-child {
+    padding-top: 80px;
+}
+
+.section-text {
+    padding: 0 0 0 90px;
+}
+
+.bucket-list {
+    padding-left: 0;
+}
+
+.section-two-image-two {
+    box-shadow: 17px 17px #345231, 500px 17px #345231;
+}
+
+/* Homepage section three */
+
+.section-three {
+    background-color: #f6f6f6;
+}
+
+.section-three-image {
+    box-shadow: 17px 17px #709b6b;
+}
+
+/* Homepage section four */
+
+.section-four {
+   height: 400px;
+   background-image: url("../assets/home-image-5.jpg");
+   background-size: cover; 
+   background-position: center;
+}
+
+/* Homepage section five */
+
+.section-five {
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    justify-content: center;
+    background-color: #FFFFFF;
+}
+
+.section-five img {
+    margin-bottom: 35px;
+    margin-left: 35px;
+}
+
+/* Homepage section six */
+
+.section-six {
+    background-color: #f6f6f6; 
+}
+
+.section-six-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.section-six-text {
+    padding-left: 45px; 
+}
+
+.display-flex {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+}
+
+.display-flex img {
+    margin-top: -15px;
+}
+
+/* Footer */
+
+footer {
+    height: auto;
+    background-color: #1f1f1f;
+}
+
+footer p {
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 20px 0;
+}
+
+/* BLOG PAGE CSS */
+
+/* header */
+
+.header-content-sub {
+    margin: 0;
+    width: 100%;
+    height: 300px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.header-content-sub h1 {
+    position: absolute; 
+    bottom: 0;
+    right: 25;
+}
+
+.blog-bk {
+    color: #f6f6f6;
+    background-image: url("../assets/blog-image-1.jpg");
+}
+
+/* Blog section one */
+
+.blog-section {
+    display:flex;
+    flex-direction: row;
+    padding-top: 50px;
+    background-color:#f6f6f6; 
+    margin-bottom: 40px;
+}
+
+
+
+.blog-sidebar-item {
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    padding: 30px;
+}
+
+.blog-sidebar {
+    flex-grow: 1;
+    margin: 0 20px 0 0;
+    height:100%;
+}
+
+.blog-content {
+    flex-grow: 2;
+    margin: 0 0 0 20px;
+}
+
+
+
+.blog-sidebar-item:last-child {
+    margin-top: 30px;
+}
+
+.post-item {
+    font-family: Montserrat, sans-serif;
+	font-size: 20px;
+	line-height: 32px; 
+}
+
+.headline-margin {
+    margin: 20px 0;
+}
+
+.bottom-border {
+    border-width: 5px;
+    border-bottom-style: solid;
+    border-color: #709b6b;
+}
+
+.blog-content-item {
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    padding: 30px;
+    margin-bottom: 20px;
+}
+
+/* FORM CSS */
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+form input {
+    padding: 20px;
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    line-height: 32px;
+    border: none;
+    color: #1f1f1f; 
+}
+
+form input::placeholder {
+    color: #1f1f1f; 
+}
+
+
+.form-row-one  {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.form-row-one input {
+    flex-grow: 1;
+}
+
+/* Name input */
+.form-row-one input:first-child {
+    margin-right: 5px;
+    color: #1f1f1f; 
+}
+
+/* Email input */
+.form-row-one input:last-child {
+    margin-left: 5px; 
+}
+
+/* Comment input*/
+
+input[type="text-area"] {
+    margin-bottom: 10px;
+}
+
+.blog-comment {
+    display: flex;
+    flex-direction: row;
+}
+
+.blog-comment div {
+    margin-left: 30px;
+}
+
+/* CONTACT PAGE CSS */
+
+.contact-sidebar-item {
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    padding: 30px;
+}
+
+.contact-bk {
+    color: #f6f6f6;
+    background-image: url("../assets/contact-image-1.jpg");
+}
+
+.contact-section {
+    display:flex;
+    flex-direction: row;
+    padding-top: 50px;
+    background-color: #f6f6f6; 
+    margin-bottom: 40px;
+}
+
+.contact-sidebar {
+    flex: 1;
+    background-color: #f6f6f6;
+}
+
+/* mailto link */
+.contact-sidebar__link {
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    line-height: 32px;
+    color: #000;
+    font-weight: bold;
+    display: block;
+    margin: 15px 0;
+}
+.contact-sidebar-item p:last-child {
+    margin-top: 0;
+}
+
+.contact-content {
+    flex: 2;
+    margin: 0 0 0 20px;
+    background-color: #f6f6f6;
+}
+
+.icon {
+    margin: 0 10px; 
+}
+
+.icon:first-child {
+    margin: 0 10px 0 0;
+}
+
+.icon:last-child {
+    margin: 0 0 0 10px;
+}
+
+/* font awesome icons styling */
+.icons i {
+    color: #345231;
+    font-size: 36px;
+    margin: 10px;
+}
+
+.icons i:first-child {
+    margin-left: 0
+}
+
+.icons i:hover {
+    color: #709b6b;
+}
+
+@media only screen and (max-width: 1200px) {
+    .header-headline {
+        font-size: 110px;
+        line-height: 500px;
+    }
+
+    .header-headline::before { 
+        content:url('../assets/circle-text-md.png');
+        left: 15px;
+        top: 20px;
+        position: absolute;
+    }
+
+    /* Blog Section CSS */
+
+    .header-content-sub {
+        padding-left: 30px;
+    }
+
+    .blog-section {
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    /* Reorder elements on mobile */
+    .blog-content {
+        order: 1;
+        margin: 0;
+    }
+
+    .blog-sidebar {
+        display: flex;
+        order: 2;
+        flex-direction: row-reverse;
+        margin: 0;
+    }
+
+    /* About willow */
+    .blog-sidebar-item:first-child {
+        flex: 2;
+        margin: 0 0 0 10px;
+        flex-direction: row;
+    }
+
+    .blog-sidebar-item:first-child > div {
+        margin-left: 20px;
+    }
+
+    /* Recent Posts */
+    .blog-sidebar-item:last-child {
+        flex: 1;
+        margin: 0 10px 0 0; 
+    }
+
+    .contact-section {
+        padding: 30px;
+    }
+
+}
+
+@media only screen and (max-width: 950px) {
+    .header-headline {
+        font-size: 100px;
+    }
+
+    .header-headline::before { 
+        left: 15px;
+        top: 20px;
+    }
+
+    .header-headline::before { 
+        display: none;
+    }
+
+    .section-two-row {
+        flex-direction: column;
+    }
+
+    .section-text {
+        padding: 80px 30px 0px 30px;
+    }
+
+    .bucket-list {
+        order: 4;
+    }
+
+    .section-three-image {
+        margin-right: 10px;
+    }
+
+    .contact-section {
+        flex-direction: column;
+    }
+
+    .contact-content {
+        width: 100%;
+        margin: 20px 0 0 0;
+        order: 1;
+    }
+
+    .contact-sidebar {
+        width: 100%;
+        order: 2; 
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .header-headline {
+        text-align: center;
+        padding: 0;
+        line-height: 300px;
+    }
+
+    .flex-headline {
+        display: block;
+    }
+    
+    .header-content {
+        height: 300px;
+    } 
+
+    .header-img {
+        display: none;
+        padding: 0;
+    }
+
+    .header-headline::before { 
+        display: none;
+    }
+
+    .flex-section-three {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    /* Blog CSS */
+    .blog-sidebar {
+        flex-direction: column;
+    }
+
+      /* About willow */
+      .blog-sidebar-item:first-child {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    /* Recent Posts */
+    .blog-sidebar-item:last-child {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    #hamburger {
+        display: block;
+        padding: 20px;
+    }
+
+    .navItem {
+        background: #345231;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .navigation {
+        display: none;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+        width: 100%;
+        padding-top: 40px;
+        background-color: #345231;
+        z-index: 2;
+    }
+
+    #toggle:checked + .navigation {
+        display: flex;
+        position: absolute;
+        margin-top: 20px;
+    }
+
+    .section-five img {
+        margin: 15px 0;
+    }
+    
+    .header-headline {
+        font-size: 50px;
+    }
+
+    .section-six-row {
+        flex-direction: column;
+    }
+
+    .container-mobile {
+        padding: 30px;
+    }
+
+    /* Blog CSS */
+    .form-row-one  {
+        flex-direction: column;
+    }
+
+    /* Name input */
+    .form-row-one input:first-child {
+        margin: 0 0 10px 0;
+    }
+
+    /* Email input */
+    .form-row-one input:last-child {
+        margin: 0; 
+    }
+
+    .blog-sidebar-item:first-child {
+        flex-direction: column;
+        margin: auto auto;
+    }
+
+    .blog-sidebar-item:first-child img {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .headline-lg {
+        font-size: 50px;
+        line-height: 40px;
+    }
+
+    .section-two-image-one, .section-two-image-two {
+        width: 100%;
+        height: 100%;
+    }
+}
